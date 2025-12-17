@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lala Rental - Qira Makinash në Shqipëri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">LR</div>
+                <div class="logo-text">Lala<span>Rental</span></div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#home">Kryefaqja</a></li>
+                    <li><a href="#cars">Makinat</a></li>
+                    <li><a href="#booking">Rezervo</a></li>
+                    <li><a href="#features">Pse Ne?</a></li>
+                    <li><a href="#contact">Kontakti</a></li>
+                    <li><a href="tel:+355691234567" class="btn">Telefono</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Hero me Video Background -->
+    <section class="hero" id="home">
+        <div class="video-background">
+            <!-- Video nga Pexels - do të përdoret një placeholder -->
+            <video autoplay muted loop playsinline>
+                <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=2e4a1aee4c9c4ef5f5e5b6d3e0b7a8d6c1f7d8f2&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+                Fallback image nëse video nuk punon
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1>Merrni me <span>Qira</span> Makinën tuaj të Ëndrrave</h1>
+                <p>Flotë e gjërë me makinë të reja dhe të mirëmbajtura. Çmime konkurruese dhe shërbim 24/7. Rezervoni online me disa klikime!</p>
+                <div class="hero-buttons">
+                    <a href="#cars" class="btn">Zgjidhni Makinën</a>
+                    <a href="#booking" class="btn btn-secondary">Rezervoni Tani</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seksioni i Makinave -->
+    <section class="cars-section" id="cars">
+        <div class="container">
+            <div class="section-title">
+                <h2>Flota <span>Jonë</span></h2>
+                <p>Zgjidhni nga një koleksion i gjerë makinash të cilësisë së lartë me çmime të arsyeshme</p>
+            </div>
+            
+            <div class="cars-filter">
+                <button class="filter-btn active" data-filter="all">Të Gjitha</button>
+                <button class="filter-btn" data-filter="economic">Ekonomike</button>
+                <button class="filter-btn" data-filter="suv">SUV</button>
+                <button class="filter-btn" data-filter="luxury">Luksoze</button>
+                <button class="filter-btn" data-filter="popular">Më të Kërkuarat</button>
+            </div>
+            
+            <div class="cars-grid" id="carsContainer">
+                <!-- Makinat do të shtohen me JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Forma e Rezervimit -->
+    <section class="booking-section" id="booking">
+        <div class="container booking-container">
+            <div class="booking-form">
+                <div class="form-title">
+                    <h3>Rezervoni Makinën tuaj</h3>
+                    <p>Plotësoni formularin dhe ne do t'ju kontaktojmë brenda 30 minutash</p>
+                </div>
+                
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Emri i Plotë</label>
+                            <input type="text" id="fullName" class="form-control" placeholder="Shkruani emrin tuaj të plotë" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefoni</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+355 69 123 4567" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickupDate">Data e Marrjes</label>
+                            <input type="date" id="pickupDate" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="returnDate">Data e Kthimit</label>
+                            <input type="date" id="returnDate" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="carSelect">Zgjidhni Makinën</label>
+                            <select id="carSelect" class="form-control" required>
+                                <option value="">Zgjidhni një makinë</option>
+                                <!-- Opsionet do të shtohen me JavaScript -->
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Vendi i Marrjes</label>
+                            <input type="text" id="location" class="form-control" placeholder="Tiranë, Shqipëri" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn">Dërgo Kërkesën</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pse të <span>Zgjidhni</span> Lala Rental?</h2>
+                <p>Ne ofrojmë më shumë se thjesht një makinë - ofrojmë përvojë të përsosur</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h4>Çmime Konkurruese</h4>
+                    <p>Ofertat më të mira në treg pa tarifa të fshehura. Garancion për çmimin më të ulët.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Siguri e Plotë</h4>
+                    <p>Të gjitha makinat tona janë plotësisht të siguruara për paqen tuaj mendore.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>Asistencë 24/7</h4>
+                    <p>Jemi në dispozicion gjatë gjithë kohës për çdo pyetje apo problem.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h4>Flotë e Gjërë</h4>
+                    <p>Zgjidhni nga dhjetëra modele të ndryshme nga ekonomi në luks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Lala Rental</h4>
+                    <p>Partneri juaj i besueshëm për qira makinash në Shqipëri. Ofrojmë cilësi, besueshmëri dhe çmime të arsyeshme.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Linqe të Shpejta</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Kryefaqja</a></li>
+                        <li><a href="#cars"><i class="fas fa-chevron-right"></i> Makinat</a></li>
+                        <li><a href="#booking"><i class="fas fa-chevron-right"></i> Rezervoni</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-right"></i> Pse Ne?</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Kontakti</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Na Kontaktoni</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://maps.google.com/?q=Tiranë,Shqipëri"><i class="fas fa-map-marker-alt"></i> Tiranë, Shqipëri</a></li>
+                        <li><a href="tel:+355691234567"><i class="fas fa-phone"></i> +355 69 123 4567</a></li>
+                        <li><a href="mailto:info@lalarental.al"><i class="fas fa-envelope"></i> info@lalarental.al</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> 24 Orë / 7 Ditë</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Lala Rental. Të gjitha të drejtat e rezervuara. | Dizajnuar me <i class="fas fa-heart" style="color:#e63946"></i> për klientët tanë</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
